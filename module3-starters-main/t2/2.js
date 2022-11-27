@@ -4,31 +4,18 @@
 // <li>Third item</li>
 // Add class my-item to the second list item
 'use strict';
-let target = document.querySelector('#target')
-let item_amount = parseInt(prompt('Give number of items'))
-let items = []
+let list = document.getElementById('target');
+let list_item_1 = document.createElement('li');
+list_item_1.innerText = 'First Item';
+list.appendChild(list_item_1);
+let list_item_2 = document.createElement('li')
+list_item_2.innerText = 'Second item';
+list_item_2.classList.add('my-item');
+list.appendChild(list_item_2);
+let list_item_3 = document.createElement('li')
+list_item_3.innerText = 'Third item';
+list.appendChild(list_item_3);
 
-// Luetaan nimet
-for(let i = 0; i<item_amount; i++){
-    items[i] = prompt('Item: ');
-}
 
 
-// Generoidaan html-lista
-let html = '<ul class="my-list">';
-html += '<ol>';
-for(let i = 0; i< item_amount; i++){
-    if (i === 1) {
-        html += '<li>';
-        html += '<ul class="my-item"></ul>'
-        html += items[i];
-        html += '</li>';
-    }else{
-    html += '<li>';
-    html += items[i];
-    html += '</li>';
-    }
-}
-
-html += '</ol></ul>';
-target.innerHTML = html
+//let css = document.createElement('class="my-item"')
