@@ -22,5 +22,6 @@ if (operation = 'add') { // use + (addition) operator to add two numbers
 
 }let output = document.getElementById('result');
     output.value = result;
+    // EI VALMIS
 
 
