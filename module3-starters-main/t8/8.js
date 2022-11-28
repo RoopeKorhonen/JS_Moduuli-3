@@ -1,27 +1,33 @@
-let number1 = parseInt(document.getElementById('#num1').value)
-let number2 = parseInt(document.getElementById('#num2').value)
-let operation = parseFloat(document.getElementById('#select').value)
-let results = document.querySelector('#result')
+'use strict';
 
+function calc(){
+    let x = document.getElementById("operation").value;
+    let number1 = document.getElementById('num1').value;
+    let number2 = document.getElementById('num2').value;
 
+if (x == 'add') {
+    let calculation = parseInt(number1) + parseInt(number2)
+    document.getElementById("result").innerHTML = calculation;
+}
 
-if (operation = 'add') { // use + (addition) operator to add two numbers
-    result = number1 + number2;
+else if (x == 'sub') {
+    let calculation = parseInt(number1) - parseInt(number2)
+    document.getElementById("result").innerHTML = calculation;
+}
+
+else if (x == 'multi') {
+    let calculation = parseInt(number1) * parseInt(number2)
+    document.getElementById("result").innerHTML = calculation;
+}
+
+else if (x == 'div') {
+    let calculation = parseInt(number1) / parseInt(number2)
+    document.getElementById("result").innerHTML = calculation;
+}
 
 }
-    else if (operation == 'sub') { // use -  (subtraction) operator to subtract two numbers
-    result = number1 - number2;
 
-}
-    else if (operation == 'multi') { // use (multiplication) operator to multiply two numbers
-    result = number1 * number2;
+const button = document.querySelector('button');
 
-}
-    else {
-    result = number1 / number2; // use / (division) operator to divide two numbers
-
-}let output = document.getElementById('result');
-    output.value = result;
-    // EI VALMIS
-
+button.onclick = calc;
 
